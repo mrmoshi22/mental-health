@@ -1,0 +1,50 @@
+import pandas as pd
+dataset = pd.read_csv('/content/cancer.csv')
+
+dataset.shape
+
+dataset.head()
+
+x = dataset.drop(columns=["questionnaire"], axis=1)
+
+x_train[0].shape
+
+y = dataset["questionnaire"]
+
+from sklearn.model_selection import train_test_split
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2)
+
+import tensorflow as tf
+model  = tf.keras.models.Sequential()
+
+x_train = np.array(x_train)
+
+import numpy as np
+x_train = np.array(x_train)
+
+x_train[0].shape
+
+x_train.shape
+
+x_train.shape, x_train[0].shape
+
+from tensorflow.keras import layers, models
+
+model2 = models.Sequential([
+    layers.Input(shape=(10,)),
+    layers.Dense(256, activation = 'sigmoid'),
+    layers.Dense(256, activation = 'sigmoid'),
+    layers.Dense(1, activation = 'sigmoid')
+])
+
+model2.compile(optimizer = 'adam' , loss = 'binary_crossentropy', metrics = ['accuracy'])
+
+model2.fit(x_train, y_train, epochs=1000)
+
+model.add(tf.keras.layers.Input(shape=(10, )))
+model.add(tf.keras.layers.Dense(256, activation = 'sigmoid'))
+model.add(tf.keras.layers.Dense(256, activation = 'sigmoid'))
+model.add(tf.keras.layers.Dense(1, activation = 'sigmoid'))
+
+model.compile(optimizer = 'adam' , loss = 'binary_crossentropy', metrics = ['accuracy'])
+
